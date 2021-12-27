@@ -8,7 +8,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 // submit the vote 
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit']) && $_POST['vote_value'] != "") {
 
     $voted_on = $_POST['vote_value'];
 
@@ -51,11 +51,6 @@ if (isset($_POST['submit'])) {
             <p><a class="c_a" href="/">Back to Home</a></p>
         </div>';
 
-
-            // echo "<h1>Thanks for Voting.</h1> ";
-            // echo  "<strong>$user</strong>";
-            // echo "<br>Your Aadhar Number is " . $_SESSION['adhar'] . "<br>";
-            // echo '<br><a href="/">Back to Home</a>';
         ?>
 
             <script>

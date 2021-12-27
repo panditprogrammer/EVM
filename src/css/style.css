@@ -163,3 +163,20 @@ footer{
 footer a{
     color: gray;
 }
+
+
+
+@media screen and (max-width: 768px){
+    .heading .brand{
+        font-size: 1.5rem;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 640px){
+    .main{
+        width: 98%;
+    }
+}

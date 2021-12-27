@@ -6,8 +6,6 @@ if (!isset($_SESSION['username'])) {
 }
 
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +19,24 @@ if (!isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Votting System by pandit programmer (Testing EVM Online Machine) EVM - Electronic Voting Machine </title>
     <link rel="stylesheet" href="/src/css/style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/src/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/src/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/src/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/src/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/src/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/src/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/src/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/src/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/src/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/src/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/src/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -93,7 +109,7 @@ if (!isset($_SESSION['username'])) {
                     <input id="btn8" value="8" type="button" name="votingbtn" class="btn" onclick="lightOn(this.id)">
                 </div>
 
-                <button type="submit" id="submit_btn" name="submit">Submit Your Vote</button>
+                <button type="submit" id="submit_btn" disabled name="submit">Submit Your Vote</button>
         </form>
     </div>
 
@@ -110,11 +126,10 @@ if (!isset($_SESSION['username'])) {
 <script>
     let click_audio = new Audio("src/kerb.wav");
     let form_post = document.getElementById("f_submit");
+    let ready = document.getElementById("submit_btn");
 
     function lightOn(e) {
-
         let number = document.getElementById(e);
-
         let generated_id = `lightId${parseInt(number.value)}`;
 
         let light = document.getElementById(generated_id);
@@ -125,9 +140,10 @@ if (!isset($_SESSION['username'])) {
             document.getElementById(`btn${i}`).disabled = true;
         }
 
-        let x = document.getElementById("vot_value");
-        x.value = number.value;
-        console.log(x.value);
+        let set_btn_value = document.getElementById("vot_value");
+        set_btn_value.value = number.value;
+
+        ready.disabled = false;
 
     }
 </script>
