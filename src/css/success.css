@@ -1,0 +1,39 @@
+
+
+.container{
+    width: 50% ;
+    min-width: 360px;
+    max-width: 1300px;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(236, 234, 234);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 20%);
+}
+.c_h1{
+    margin: 1rem;
+
+}
+
+.c_a{
+    display: block;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    border: 1px solid #811f1f;
+    
+}
+
+.c_a:hover{
+    color: silver;
+    background-color: #811f1f;
+}
+.c_p{
+    margin-top: 0.44rem;
+    padding: 0.2rem;
+    text-align: left;
+}

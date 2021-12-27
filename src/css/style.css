@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-width: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body .heading{
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    background-color: #811f1f;
+    box-shadow: 0px 5px 10px 0px silver;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.heading .brand{
+    font-size: 2rem;
+    padding: 0.3rem;
+    text-transform: capitalize;
+    color: white;
+
+}
+
+.heading .user_info{
+    color: white;
+    font-size: 1rem;
+
+}
+
+.heading .user_info .logout{
+    font-size: 1rem;
+    padding: 0.3rem;
+    margin-left: 10px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+
+}
+
+.main{
+    margin: 50px auto;
+    padding: 0.5rem;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px ;
+    background-color: rgb(236, 233, 233);
+    box-shadow: 0px 10px 25px 0px ;
+    position: relative;
+}
+
+/* left side  */
+.main .left{
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.main .left .candidate{
+    width: 90%;
+    height: 100px;
+    background-color: white;
+    border: 1px solid silver ;
+    border-radius: 3px;
+
+}
+
+.main form{
+    width: 35%;
+
+}
+
+/* right side */
+.main form .right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main .right .right_div{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border: 1px solid silver;
+    border-radius: 3px;
+
+
+}
+
+.main .right .right_div .light{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.main .right .right_div .btn{
+    display: block;
+    width: 80px;
+    padding: 10px 12px;
+    border-radius: 1.5rem;
+    outline-color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: rgb(223, 190, 4);
+    color: white;
+    cursor: pointer;
+    transition: all 0.8s;
+
+}
+
+#submit_btn{
+    width: 200px;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    background-color: #811f1f;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 20%);
+    position: absolute;
+    bottom: -10%;
+    left: calc(50% - 100px);
+}
+
+footer{
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    height: 70px;
+    background-color: black;
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    color: gray;
+}
