@@ -23,13 +23,12 @@ if (isset($_POST['submit']) && $_POST['vote_value'] != "") {
         if ($row['user_adhar'] == $adhar) {
             $_SESSION['submitted_on'] = $row['t_and_date'];
             $check_user_exist = true;
-    ?>
+?>
             <script>
                 alert("Already Voted! \n Don't try again otherwise you will be rejected");
             </script>
         <?php
-        header("location:index.php");
-            
+            header("location:dashboard.php");
         }
     }
 
@@ -44,9 +43,9 @@ if (isset($_POST['submit']) && $_POST['vote_value'] != "") {
 
             echo '<div class="container">
             <h1 class="c_h1">Thanks for Votting.</h1>
-            <p class="c_p">Voter Id : <strong>'.$user.'</strong></p>
-            <p class="c_p">Aadhar (UIDAI) : <strong>'. $_SESSION['adhar'].' </strong></p>
-            <p class="c_p">Submitted on : <strong>'.$_SESSION['submitted_on'].'</strong></p>
+            <p class="c_p">Voter Id : <strong>' . $user . '</strong></p>
+            <p class="c_p">Aadhar (UIDAI) : <strong>' . $_SESSION['adhar'] . ' </strong></p>
+            <p class="c_p">Submitted on : <strong>' . $_SESSION['submitted_on'] . '</strong></p>
     
             <p><a class="c_a" href="/">Back to Home</a></p>
         </div>';
@@ -57,11 +56,18 @@ if (isset($_POST['submit']) && $_POST['vote_value'] != "") {
                 alert("Congratulations!\nYour Voting Successfully completed.");
             </script>
 
-<?php
+        <?php
         } else {
 
             echo "Something went wrong\nPlease, Try again!";
         }
+    } else {
+        ?>
+        <script>
+            alert("Already Voted! \n Don't try again otherwise you will be rejected");
+        </script>
+<?php
+        header("location:dashboard.php");
     }
 }
 

@@ -1,149 +1,33 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['username'])) {
-    header("location:login.php");
-}
-
+require_once "header.php";
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="This is testing online votting system project written in php and MYSQL database by panditprogrammer.com . This projects Demonstrate how to be handle Billions of Indian citizen votes using this services. This EVM fully optimized and secured for votting . User can Vote only one time using their Aadhar UIDAI identification . ">
-    <meta name="keywords" content="Online votting system projects , EVM- Electronic votting system, php and mysql votting projects by pandit programmer, php projects by pandit projects, mysql projects by pandit programmer, votting system , india votting system , Aadhar based votting system">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Votting System by pandit programmer (Testing EVM Online Machine) EVM - Electronic Voting Machine </title>
-    <link rel="stylesheet" href="/src/css/style.css">
+<link rel="stylesheet" href="/src/css/index.css">
+<section class="first_page ">
+   
+    <div class="page_content">
+    <h1>Welcome to Online votting system.</h1>
+    <h5>EVM by UIDAI</h5>
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/src/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/src/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/src/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/src/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/src/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/src/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/src/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/src/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/src/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/src/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/src/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/src/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-</head>
-
-<body>
-    <div class="heading">
-        <span class="brand">Election Commision of India</span>
-
-        <span class="user_info">
-            <span id="user_name"><?php echo $_SESSION['username'] ?></span>
-            <a href="logout.php" class="logout">Log Out</a>
-        </span>
-
+    <p>Follow these steps to Submit your vote successfully - </p>
+    <ol>
+        <li>Register with Aadhar</li>
+        <li>Login</li>
+        <li>Go to Dashboard</li>
+        <li>Vote</li>
+        <li>Done</li>
+    </ol>
     </div>
 
-
-    <div class="main">
-
-        <div class="left">
-            <div class="candidate"></div>
-            <div class="candidate"></div>
-            <div class="candidate"></div>
-            <div class="candidate"></div>
-            <div class="candidate"></div>
-            <div class="candidate"></div>
-            <div class="candidate"></div>
-            <div class="candidate"></div>
-        </div>
-        <form action="success.php" method="POST" id="this_form">
-
-            <input type="hidden" name="vote_value" id="vot_value" style="display: none;">
-            <div class="right">
-                <div class="right_div">
-                    <span class="light" id="lightId1"></span>
-                    <input id="btn1" value="1" type="button" name="votingbtn" class="btn" onclick="lightOn(this.id)">
-                </div>
+</section>
 
 
-                <div class="right_div">
-                    <span class="light" id="lightId2"></span>
-                    <input id="btn2" value="2" type="button" name="votingbtn" class="btn" onclick="lightOn(this.id)">
-                </div>
 
-                <div class="right_div">
-                    <span class="light" id="lightId3"></span>
-                    <input id="btn3" value="3" type="button" name="votingbtn" class="btn" onclick="lightOn(this.id)">
-                </div>
 
-                <div class="right_div">
-                    <span class="light" id="lightId4"></span>
-                    <input id="btn4" value="4" type="button" name="votingbtn" class="btn" onclick="lightOn(this.id)">
-                </div>
+<?php
+require_once "footer.php";
 
-                <div class="right_div">
-                    <span class="light" id="lightId5"></span>
-                    <input id="btn5" value="5" type="button" name="votingbtn" class="btn" onclick="lightOn(this.id)">
-                </div>
+?>
 
-                <div class="right_div">
-                    <span class="light" id="lightId6"></span>
-                    <input id="btn6" value="6" type="button" name="votingbtn" class="btn" onclick="lightOn(this.id)">
-                </div>
-
-                <div class="right_div">
-                    <span class="light" id="lightId7"></span>
-                    <input id="btn7" value="7" type="button" name="votingbtn" class="btn" onclick="lightOn(this.id)">
-                </div>
-
-                <div class="right_div">
-                    <span class="light" id="lightId8"></span>
-                    <input id="btn8" value="8" type="button" name="votingbtn" class="btn" onclick="lightOn(this.id)">
-                </div>
-
-                <button type="submit" id="submit_btn" disabled name="submit">Submit Your Vote</button>
-        </form>
-    </div>
-
-    </div>
-
-    <footer>
-        <p> &copy; All right Reserved ECI 2022 <br> Developed by <a target="blank" href="http://panditprogrammer.com">PanditProgrammer.com</a> </p>
-    </footer>
-
-</body>
-
-</html>
-
-<script>
-    let click_audio = new Audio("src/kerb.wav");
-    let form_post = document.getElementById("f_submit");
-    let ready = document.getElementById("submit_btn");
-
-    function lightOn(e) {
-        let number = document.getElementById(e);
-        let generated_id = `lightId${parseInt(number.value)}`;
-
-        let light = document.getElementById(generated_id);
-        light.style.backgroundColor = "green";
-        click_audio.play();
-
-        for (let i = 1; i < 9; i++) {
-            document.getElementById(`btn${i}`).disabled = true;
-        }
-
-        let set_btn_value = document.getElementById("vot_value");
-        set_btn_value.value = number.value;
-
-        ready.disabled = false;
-
-    }
-</script>

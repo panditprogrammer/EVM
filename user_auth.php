@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
     // if username not found in database 
     if ($check) {
 
-        header('location:index.php');
+        header('location:dashboard.php');
     } else {
 
 ?>

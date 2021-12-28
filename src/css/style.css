@@ -5,17 +5,15 @@
 }
 
 body{
+    height: 100%;
     width: 100%;
     min-width: 640px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   
 }
 
 body .heading{
     width: 100%;
-    height: 60px;
+    height: 80px;
     margin: auto;
     background-color: #811f1f;
     box-shadow: 0px 5px 10px 0px silver;
@@ -25,20 +23,42 @@ body .heading{
 }
 
 .heading .brand{
-    font-size: 2rem;
+    font-size: 4vmin;
     padding: 0.3rem;
     text-transform: capitalize;
     color: white;
-
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.heading .user_info{
+.menu{
+    /* width: 50%; */
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu a{
+    padding: 0.3rem 0.7rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
     color: white;
-    font-size: 1rem;
+    border-radius: 4px;    
+}
+
+.menu a:hover{
+    background-color: white;
+    color: black;
+}
+
+.heading #user_name{
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
 
 }
 
-.heading .user_info .logout{
+.heading #user_name .logout{
     font-size: 1rem;
     padding: 0.3rem;
     margin-left: 10px;
@@ -50,7 +70,7 @@ body .heading{
 
 }
 
-.main{
+.index_main{
     margin: 50px auto;
     padding: 0.5rem;
     width: 600px;
@@ -64,7 +84,7 @@ body .heading{
 }
 
 /* left side  */
-.main .left{
+.index_main .left{
     width: 65%;
     display: flex;
     justify-content: space-around;
@@ -73,7 +93,7 @@ body .heading{
 
 }
 
-.main .left .candidate{
+.index_main .left .candidate{
     width: 90%;
     height: 100px;
     background-color: white;
@@ -82,13 +102,13 @@ body .heading{
 
 }
 
-.main form{
+.index_main form{
     width: 35%;
 
 }
 
 /* right side */
-.main form .right {
+.index_main form .right {
     width: 100%;
     height: 100%;
     display: flex;
@@ -97,7 +117,7 @@ body .heading{
     flex-direction: column;
 }
 
-.main .right .right_div{
+.index_main .right .right_div{
     width: 90%;
     height: 100px;
     display: flex;
@@ -110,14 +130,14 @@ body .heading{
 
 }
 
-.main .right .right_div .light{
+.index_main .right .right_div .light{
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: red;
 }
 
-.main .right .right_div .btn{
+.index_main .right .right_div .btn{
     display: block;
     width: 80px;
     padding: 10px 12px;
@@ -167,9 +187,9 @@ footer a{
 
 
 @media screen and (max-width: 768px){
-    .heading .brand{
+    /* .heading .brand{
         font-size: 1.5rem;
-    }
+    } */
 
     
 }
