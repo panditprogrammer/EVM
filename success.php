@@ -70,6 +70,7 @@ if (isset($_POST['submit']) && $_POST['vote_value'] != "") {
         header("location:dashboard.php");
     }
 }
+header("location:index.php");
 
 
 

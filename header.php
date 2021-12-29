@@ -43,9 +43,16 @@ session_start();
             <a href="/">Home</a>
 
             <?php if (isset($_SESSION['username'])) {
-                echo '<a href="/dashboard.php">Dashboard</a>';
-                echo ' <a href="/logout.php" class="logout">Log Out</a>';
-                echo '<div id="user_name">' . $_SESSION['username'] . ' </div>';
+                // echo '<a href="/dashboard.php">Dashboard</a>';
+                // echo ' <a href="/logout.php" class="logout">Logout</a>';
+                echo '<div id="user_name"> 
+                        <img src="/src/user_thumb.png" title="Profile"></img>
+                        <div class="show" >  
+                            <a>' . $_SESSION['username'] . ' </a>
+                            <a href="/dashboard.php">Dashboard</a>
+                            <a href="/logout.php" class="logout">Logout</a>
+                        </div>
+                      </div>';
             } else {
                 echo '<a href="/login.php">Log In</a>';
                 echo '<a href="/register.php">Register</a>';
